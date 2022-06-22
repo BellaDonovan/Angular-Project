@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title class="title">Contacts</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-card class="contact" *ngFor = 'let person of people'>
+    <button class="button" (click)='onClick(person)'>
+    <div class = 'name'>
+    {{person.name}}
+    </div>
+    <br>
+    <div>
+      Phone : {{person.phoneNum}}
+    </div>
+    <div>
+      Email : {{person.email}}
+    </div>
+    <div>
+      Address : {{person.address}}
+    </div>
+    <div>
+      Age : {{person.age}}
+    </div>
+  </button>
+  </ion-card>
+  <ion-card class = 'fact' *ngIf = 'selected'>
+      Fun Fact : {{this.selected.fact}}
+  </ion-card>
+</ion-content>
+
+<ion-button (click)="changePage()">
+  Home
+</ion-button>
+
