@@ -1,13 +1,18 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>justinPage1</ion-title>
+    <ion-title>Justin Page 1</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-button (click) = "changePage('/home')">Go To: Home</ion-button>
+  <ion-button (click) = "change(.2)">Change</ion-button>
+  <ion-button (click) = "randomize()">Randomize</ion-button>
+  <ion-button (click) = "switch()">Switch</ion-button>
   <ion-card>
-    <canvas id="myChart" width="50" height="50" #myChart>
-
-    </canvas>
+    <canvas id="myChart" width="30px" height="10px" #myChart></canvas>
   </ion-card>
+  <!-- <ion-card>
+    <canvas id="weatherChart" width="40px" height="10px" #weatherChart></canvas>
+  </ion-card> -->
 </ion-content>
